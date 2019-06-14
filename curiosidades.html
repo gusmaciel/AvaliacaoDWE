@@ -1,0 +1,206 @@
+<!-- Web site desenvolvido por: Gustavo Maciel - Desenvolvedor Front-end    Data: 13/06/2019 -->
+<!DOCYTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="O site tem o intuito de mostrar as modalidades do paraquedismo">
+        <meta name="author" content="Gustavo Maciel">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Curiosidades | Queda Livre®</title>
+        <link rel="icon" href="img/favicon.png">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/contato.css">
+        <link rel="stylesheet" href="css/modalidades.css">
+        <link rel="stylesheet" href="css/sobre.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/menu_responsivo.css">        
+        <link href="https://fonts.googleapis.com/css?family=Changa" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Boogaloo&display=swap" rel="stylesheet">
+    </head>
+    <body class="corpo" id="topo">
+            <header class="cabecalho">
+                    <div class="container">
+                        <button class="menu-abrir">Abre Menu</button>
+                        <h1  class="titulo"> 
+                            <a class="foto-paraquedista" href="index.html"></a>
+                        </h1>
+                        <nav class="menu">
+                            <button class="menu-fechar">Fecha Menu</button>
+                            <ul class="navegacao">
+                                <li><a href="index.html">home</a></li>
+                                <li><a href="sobre.html">sobre</a></li>
+                                <li><a href="modalidades.html">modalidades</a></li>
+                                <li><a href="curiosidades.html">curiosidades</a></li>
+                                <li><a href="acesso.html">ACESSO AO CLIENTE</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </header>
+        <main class="container">
+            <div class="conteudo-fotos">
+                <h1 class="titulo-galeria">RESPONDA O QUIZ A SEGUIR...</h1>
+                <ul class="menu-fotos">
+
+
+
+<!--DEFINE AS FONTES USADA NAS PERGUNTAS E RESPOSTAS-->
+<style type=text/css>
+#center{font-family:arial;font-size:8pt;color:#696969;}
+#pergunta{background-color:#fefefe;font-family:arial;font-size:8pt;color:#696969;}
+#resposta{background-color:#fefefe;font-family:arial;font-size:8pt;color:#696969;}
+#input{border:1px solid #cccccc;background-color:#fefefe;font-family:arial;font-size:8pt;color:#696969;}
+#normal{font-family:arial;font-size:8pt;color:#696969;text-decoration:none;}
+input{font-family:arial;font-size:8pt;color:#1c1c1c;}
+</style>
+
+<script language="JavaScript"> 
+/* início do código  */
+<!-- 
+var pontos=0; 
+function reponse(form) { 
+for (var i=0;i<form.length;i++){ 
+ if (form[i].checked){ 
+  break 
+ } 
+} 
+var answer="" 
+if (i<form.length){ 
+ answer = form[i].value 
+} 
+return answer; 
+} 
+
+function solution(form) { 
+/* variável para cada pergunta */
+var points=0;var rep="";var comment="";var resposta1="";var resposta2="";var resposta3="";var onome=""
+
+/* valor de pontos para as questões */
+if (reponse(form.question1)=="A") {pontos+=1} 
+if (reponse(form.question2)=="B") {pontos+=1} 
+if (reponse(form.question3)=="B") {pontos+=1} 
+
+/* cada mensagem vai de acordo com o input marcado para resposta */
+
+/* mensagem para questão 1 */
+if (reponse(form.question1)=="") {resposta1="<font color=#cccccc>não respondida</font>"} 
+if (reponse(form.question1)=="A") {resposta1="<font color=#0099cc>correta</font>"} 
+if (reponse(form.question1)=="B") {resposta1="<font color=#cccccc>incorreta</font>"}
+if (reponse(form.question1)=="C") {resposta1="<font color=#cccccc>incorreta</font>"}
+
+/* mensagem para questão 2 */
+if (reponse(form.question2)=="") {resposta2="<font color=#cccccc>não respondida</font>"} 
+if (reponse(form.question2)=="A") {resposta2="<font color=#cccccc>incorreta</font>"} 
+if (reponse(form.question2)=="B") {resposta2="<font color=#0099cc>correta</font>"}
+if (reponse(form.question2)=="C") {resposta2="<font color=#cccccc>incorreta</font>"}
+
+/* mensagem para questão 3 */
+if (reponse(form.question3)=="") {resposta3="<font color=#cccccc>não respondida</font>"} 
+if (reponse(form.question3)=="A") {resposta3="<font color=#cccccc>incorreta</font>"} 
+if (reponse(form.question3)=="B") {resposta3="<font color=#0099cc>correta</font>"}
+if (reponse(form.question3)=="C") {resposta3="<font color=#cccccc>incorreta</font>"}
+
+/* aqui é exibido a mensagem de acordo com o ponto marcado */
+if (pontos==0) {comment="você não fez pontos, tente novamente"}
+if (pontos==1) {comment="você fez um ponto, continue assim"}
+if (pontos==2) {comment="você fez 2 pontos, está quase lá"}
+if (pontos==3) {comment="excelente! você acertou todas!<br><br><a href=\"javascript:;\" onClick=\"window.print();return false\">Imprimir este certificado</a><br>Veja o seu certificado abaixo:<br><br><img src=img_certificado.gif border=0>"}
+
+/* aqui exibo a porcentagem de acordo com o ponto  */
+if (pontos==0) {porcentagem="0%"}
+if (pontos==1) {porcentagem="33%"}
+if (pontos==2) {porcentagem="66%"}
+if (pontos==3) {porcentagem="100%"}
+
+/* aqui inicio o código mostrado na nova janela */
+chaine='' 
++'<head><title>Resultado</title>'
++'<style type=text/css>a{font-family:arial;font-size:8pt;color:#696969;text-decoration:none;}#texto{font-family:verdana,arial;font-size:8pt;color:#696969;}#textos{font-family:verdana,arial;font-size:10px;color:#c7c7c7;}input{border:1px solid #f8f8f8;background-color:fefefe;font-family:arial;font-size:8pt;color:#1c1c1c;}#resultado{font-family:arial;font-size:8pt;color:#696969;}</style>'
++'</head>'
++'<center><font id=texto>Você atingiu um total de <font color=#0099cc><b>'+ pontos +'</b></font> pontos, acertando '+ porcentagem +' das questões.<br><br><font color=#696969>'+comment+'<BR>' 
+
++'<br><center><font id=texto>'+ formmail.onome.value +' veja abaixo o resumo das questões:</font></center><br>'
+
++'<table border=0 cellpading=3 cellspacing=3 style="border:1px solid #f8f8f8;background-color:#ffffff;" width="150">'
++"<tr><td><font id=textos>1)</td><td><font id=resultado>"+ resposta1 +"</font></td></tr>"
++"<tr><td><font id=textos>2)</td><td><font id=resultado>"+ resposta2 +"</font></td></tr>"
++"<tr><td><font id=textos>3)</td><td><font id=resultado>"+ resposta3 +"</font></td></tr>"
++"</table></form>"
++'<a href="javascript:void(0)" onclick="javascript:window.close()">FECHAR</a>'
++'</CENTER></BODY></HTML>' 
+solu=open(); 
+solu.document.write(chaine) 
+} 
+//--> 
+</script> 
+<title>Questionário</title> 
+<script>
+function vai() {
+location.reload()
+}
+
+</script>
+<form name=formmail>
+<br>
+<center><font id=normal>cada questão vale 1 ponto</font></center>
+<center><a href=# onClick="vai()"><font id=normal>[ Clique aqui para fazer Novamente ]</font></a></center>
+<center><font id=normal>[ marque somente uma questão por pergunta ]</font></center>
+<div align=center> 
+<table border=0 cellpading=3 cellspacing=3 style="border:1px solid #f8f8f8;background-color:#ffffff;" width=400>
+<tr><td>
+<font id=pergunta> 
+Coloque ao lado o seu Nome:&nbsp;</font><input type="text" name="onome" value="" size=44 id=input><font color=#0099cc face=verdana size=1><b>&nbsp;*</b><br>
+<font id=pergunta> 
+1 - Que número é este [1]?</font>
+<br><font id=resposta> 
+<font id=pergunta>(A)</font><input TYPE="checkbox" NAME="question1" VALUE="A"><font id=resposta>Um<br>
+<font id=pergunta>(B)</font><input TYPE="checkbox" NAME="question1" VALUE="B"><font id=resposta>Dois<br>
+<font id=pergunta>(C)</font><input TYPE="checkbox" NAME="question1" VALUE="C"><font id=resposta>Três<br>
+<br>
+<font id=pergunta> 
+2 - Que número é este [6]?</font>
+<br> 
+<font id=pergunta>(A)</font><input TYPE="checkbox" NAME="question2" VALUE="A"><font id=resposta>Cinco<br>
+<font id=pergunta>(B)</font><input TYPE="checkbox" NAME="question2" VALUE="B"><font id=resposta>Seis<br>
+<font id=pergunta>(C)</font><input TYPE="checkbox" NAME="question2" VALUE="C"><font id=resposta>Sete<br>
+<br>
+<font id=pergunta> 
+3 - Que letra é esta [c]?</font>
+<br> 
+<font id=pergunta>(A)</font><input TYPE="checkbox" NAME="question3" VALUE="A"><font id=resposta>b<br>
+<font id=pergunta>(B)</font><input TYPE="checkbox" NAME="question3" VALUE="B"><font id=resposta>c<br>
+<font id=pergunta>(C)</font><input TYPE="checkbox" NAME="question3" VALUE="C"><font id=resposta>d<br>
+<br>
+<center>
+<input TYPE="button" NAME="valide" VALUE="Resultado" onclick="javascript:solution(this.form);" style="border:1px solid #f8f8f8;background-color:#ffffff;color:#696969;"> 
+</center></td></form></tr>
+</table> 
+<center><a href=# onClick="vai()"><font id=normal>[ Clique aqui para fazer Novamente ]</font></a></center>
+
+                </ul>
+            </div>
+            <a class="botao-voltar" href="#topo">Voltar ao Inicio</a>
+        </main>
+        <footer class="rodape">
+            <div class="container">
+                <nav class="menu-redes-sociais">       
+                    <ul class="redes-sociais">
+                        <li><h1>siga</h1></li>
+                        <li><a class="facebook" href="#">Facebook</a></li>
+                        <li><a class="twitter"  href="#">Twitter</a></li>
+                        <li><a class="instagram" href="#">Instagram</a></li>
+                        <li><a class="linkedin" href="#">Linkedin</a></li>
+                    </ul>
+                </nav>
+                <p class="direitos-autorais"> copyrigth	Queda Livre® | Todos os direitos revervados</p>
+            </div>
+        </footer>
+
+         <!-- Scripts JavaScript -->
+         <script src="js/jquery.js"></script>
+         <script src="js/botao_voltar_inicio.js"></script>  
+         <script src="js/menu_responsivo.js"></script>       
+    </body>
+</html>
